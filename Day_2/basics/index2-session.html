@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Intro</title>
+    </head>
+    <body>
+
+        <h2 id="greeting">مرحبا</h2> <!-- يبقي عربي -->
+        <button onclick="sayWelcome()">Click Me</button>
+
+        <script>
+        function sayWelcome() {
+            document.getElementById("greeting").innerHTML = "مرحبا من جافا سكريبت!"; //يبقي عربي
+            document.getElementById("greeting").style.background = "#1a1"; // نغير الخلفية
+        }
+        </script>
+
+    </body>
+</html>

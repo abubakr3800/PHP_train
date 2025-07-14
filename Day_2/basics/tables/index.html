@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tables</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(45deg , #3f0 , #af0);
+            min-height: 100vh;
+            padding: 50px 0;
+            margin: 0;
+        }
+
+        .log-table{
+            width: fit-content;
+            margin: 0 auto;
+            padding: 50px ;
+            background-color: #f2f2f2;
+        }
+
+        .log-table tr td, .log-table tr th {
+            padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+
+    <table class="log-table" border="1">
+      <thead>
+        <tr>
+          <th>id</th><!-- table head -->
+          <th>Name</th>
+          <th>Subject</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td> <!-- table data -->
+          <td>Ahmed</td>
+          <td>Math</td>
+          <td>95</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Salma</td>
+          <td>Science</td>
+          <td>88</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>sami</td>
+          <td>geography</td>
+          <td>75</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Subject</th>
+          <th>Grade</th>
+        </tr>
+      </tfoot>
+
+    </table>
+
+  </body>
+</html>

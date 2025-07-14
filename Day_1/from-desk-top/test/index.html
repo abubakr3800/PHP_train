@@ -1,0 +1,94 @@
+<?php
+header('Content-Type: application/json');
+
+$data = [
+    'users' => [
+        [
+            'id' => 1,
+            'name' => 'John Doe',
+            'email' => 'john.doe@example.com',
+            'age' => 30,
+            'city' => 'New York',
+            'skills' => ['PHP', 'JavaScript', 'MySQL']
+        ],
+        [
+            'id' => 2,
+            'name' => 'Jane Smith',
+            'email' => 'jane.smith@example.com',
+            'age' => 25,
+            'city' => 'Los Angeles',
+            'skills' => ['Python', 'React', 'MongoDB']
+        ],
+        [
+            'id' => 3,
+            'name' => 'Mike Johnson',
+            'email' => 'mike.johnson@example.com',
+            'age' => 35,
+            'city' => 'Chicago',
+            'skills' => ['Java', 'Spring Boot', 'PostgreSQL']
+        ],
+        [
+            'id' => 4,
+            'name' => 'Sarah Wilson',
+            'email' => 'sarah.wilson@example.com',
+            'age' => 28,
+            'city' => 'Boston',
+            'skills' => ['C#', '.NET', 'SQL Server']
+        ],
+        [
+            'id' => 5,
+            'name' => 'David Brown',
+            'email' => 'david.brown@example.com',
+            'age' => 32,
+            'city' => 'Seattle',
+            'skills' => ['Go', 'Docker', 'Kubernetes']
+        ]
+    ],
+    'products' => [
+        [
+            'id' => 1,
+            'name' => 'Laptop',
+            'price' => 999.99,
+            'category' => 'Electronics',
+            'inStock' => true
+        ],
+        [
+            'id' => 2,
+            'name' => 'Smartphone',
+            'price' => 699.99,
+            'category' => 'Electronics',
+            'inStock' => true
+        ],
+        [
+            'id' => 3,
+            'name' => 'Headphones',
+            'price' => 199.99,
+            'category' => 'Audio',
+            'inStock' => false
+        ],
+        [
+            'id' => 4,
+            'name' => 'Coffee Maker',
+            'price' => 89.99,
+            'category' => 'Home & Kitchen',
+            'inStock' => true
+        ],
+        [
+            'id' => 5,
+            'name' => 'Running Shoes',
+            'price' => 129.99,
+            'category' => 'Sports',
+            'inStock' => true
+        ]
+    ],
+    'categories' => [
+        'Electronics',
+        'Audio',
+        'Home & Kitchen',
+        'Sports',
+        'Books',
+        'Clothing'
+    ]
+];
+
+echo json_encode($data['users']);

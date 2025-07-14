@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- <meta charset="UTF-8"> -->
+
+  <title>Student Registration</title>
+  <style>
+    *{
+        box-sizing: border-box;
+    }
+
+    body {
+      font-family: "comic sans ms";
+      background-color: #f2f2f2;
+      padding: 40px;
+    }
+
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input, select {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #output {
+      margin-top: 20px;
+      background: #e9ffe9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Student Registration</h2>
+  <input type="text" id="name" placeholder="Your Name" />
+  <input type="email" id="email" placeholder="Email Address" />
+  <select id="level">
+    <option value="">Select Level</option>
+    <option value="First Year">First Year</option>
+    <option value="Second Year">Second Year</option>
+    <option value="Third Year">Third Year</option>
+    <option value="Fourth Year">Fourth Year</option>
+  </select>
+  <button onclick="registerStudent()">Register</button>
+
+  <div id="output"></div>
+</div>
+
+<script>
+  function registerStudent() {
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const level = document.getElementById("level");
+
+    if (name.value === "" || email.value === "" || level.value === "") {
+      alert("Please fill in all fields");
+      return;
+    }
+
+    const message = `
+      <h3>✔️ Registration Complete!</h3>
+      <p><strong>Name:</strong> ${name.value}</p>
+      <p><strong>Email:</strong> ${email.value}</p>
+      <p><strong>Level:</strong> ${level.value}</p>
+    `;
+
+    document.getElementById("output").innerHTML = message;
+  }
+</script>
+
+</body>
+</html>

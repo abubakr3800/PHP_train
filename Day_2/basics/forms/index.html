@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form simple</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form 
+        action="submit.php" 
+        method="post" 
+        class="log-form">
+
+            <!-- start the first input with its label -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="fullname" />
+            <!-- end the first input with its label -->
+
+            <!-- start the second input with its label -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+            <!-- end the second input with its label -->
+
+            <!-- start the select with its label -->
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <!-- end the select input with its label -->
+
+            <!-- start the textarea with its label -->
+            <label for="message">Message:</label>
+            <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="4" 
+                        cols="30"></textarea>
+            <!-- end the textarea with its label -->
+
+        <button type="submit" >send data</button>
+    </form>
+
+    
+</body>
+</html>

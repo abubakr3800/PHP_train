@@ -1,0 +1,25 @@
+h1 {
+    color: #800000;
+}
+
+p {
+    /* 
+        background-image: url(https://placehold.co/150x70) ;
+        background-color: #51ff00; 
+        background-repeat: no-repeat; 
+    */
+    background: #ff001e no-repeat;
+    width: fit-content;
+    padding: 20px 50px 100px 300px;
+    font-family: "comic sans ms";
+
+    /*
+        color codes : red green blue
+        rgb()    :   
+        hex code : # red green blue
+    */
+}
+
+p{
+    padding-left: 200px;
+}

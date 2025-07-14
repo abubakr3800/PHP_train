@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Input Example</title>
+</head>
+<body>
+
+<h2>Say Hello</h2>
+
+<input type="text" id="username" placeholder="اسم الطالب" oninput="printName()"/>
+<button onclick="printData()">اظهر النتيجة</button>
+
+<p id="output">
+    <!-- here the text or html -->
+</p>
+
+<p id="data"></p>
+
+<script>
+    function printName(){
+        let name = document.getElementById("username").value;
+        document.getElementById("output").innerHTML = "<i>Hello, </i>" + name + "!";
+    }
+    
+    function printData(){
+        let name = document.getElementById("username").value;
+        document.getElementById("data").innerHTML = "<i>Hello, </i>" + name + "! your grade is 90%";
+    }
+    
+</script>
+
+</body>
+</html>

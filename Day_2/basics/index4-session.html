@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="score" placeholder="Enter your score" />
+    <button onclick="checkResult()">Check Result</button>
+    <p id="result"></p>
+
+    <script>
+        function checkResult() {
+            let score = document.getElementById("score").value;
+            if (score >= 90) {
+                document.getElementById("result").innerHTML = "GPA (A)";
+            } else if (score >= 80) {
+                document.getElementById("result").innerHTML = "GPA (B)"
+            } else if (score >= 70) {
+                document.getElementById("result").innerHTML = "GPA (C)"
+            } else {
+                document.getElementById("result").innerHTML = "GPA (F)"
+            }
+        }
+    </script>
+
+</body>
+</html>

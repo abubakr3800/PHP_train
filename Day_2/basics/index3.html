@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Document </title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+         nav ul {
+            list-style: none;
+            margin: 5px 30px !important;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline-block;
+
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background 0.3s ease-in-out;
+        }
+            
+        
+        nav ul li a:hover {
+            background-color: #555;
+            text-decoration: line-through;
+        }
+
+        input , textarea , button , select {
+            display: block;
+        }
+        
+        .log-form{
+            width: fit-content;
+            margin: 30px auto;
+            padding: 50px ;
+            background-color: #f2f2f2;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            font-family: "comic sans ms";
+
+        }
+        
+        .log-form input , .log-form textarea , .log-form button , .log-form select{
+            width: 100%;
+            margin: 10px;
+            padding: 10px;
+            border: #ddd .3px solid;
+            outline-color: #f00;
+            transition: all .5s ease-in-out;
+        }
+
+        .log-form > .form-element:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .log-form button {
+            background-color: #3a3;
+            color: #fff;
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#lastform">Contact</a></li>
+        </ul>
+    </nav>
+
+    <form action="submit.php" method="post" class="log-form">
+
+            <!-- start the first input with its label -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="fullname" placeholder="Type Your Name" class="form-element"/>
+            <!-- end the first input with its label -->
+
+            <!-- start the second input with its label -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Type Your Name" class="form-element"/>
+            <!-- end the second input with its label -->
+
+            <!-- start the select with its label -->
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" class="form-element">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <!-- end the select input with its label -->
+
+            <!-- start the textarea with its label -->
+            <label for="message">Message:</label>
+            <textarea   class="form-element"
+                        id="message" 
+                        name="message" 
+                        rows="4" 
+                        cols="30"
+                        placeholder="Type Your Name"></textarea>
+            <!-- end the textarea with its label -->
+
+        <button type="button" class="form-element" >send data</button>
+
+    </form>
+
+</body>
+</html>
