@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Day 1 - Task Navigation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .task-card {
+            transition: transform 0.2s;
+        }
+        .task-card:hover {
+            transform: translateY(-5px);
+        }
+        .task-number {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center mb-5">
+                    <h1 class="display-4">PHP Day 1 - Task Navigation</h1>
+                    <p class="lead">Comprehensive PHP learning tasks covering fundamentals to advanced concepts</p>
+                    <hr class="my-4">
+                </div>
+                
+                <div class="row">
+                    <!-- Task 1 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card task-card h-100 border-primary">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">Task 1: Basic PHP Syntax</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="task-number text-primary mb-3">01</div>
+                                <h6>Basic PHP Syntax and Variables</h6>
+                                <p class="text-muted">Learn PHP opening/closing tags, variables, data types, gettype() function, string concatenation, and arithmetic operations.</p>
+                                <ul class="list-unstyled">
+                                    <li>✅ PHP tags</li>
+                                    <li>✅ Variable declaration</li>
+                                    <li>✅ Data types</li>
+                                    <li>✅ gettype() function</li>
+                                    <li>✅ String concatenation</li>
+                                    <li>✅ Arithmetic operations</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <a href="basic_syntax.php" class="btn btn-primary w-100">Start Task 1</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task 2 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card task-card h-100 border-success">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0">Task 2: Functions & Scope</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="task-number text-success mb-3">02</div>
+                                <h6>Functions and Variable Scope</h6>
+                                <p class="text-muted">Explore different types of functions, parameters, return values, local/global scope, static variables, and built-in functions.</p>
+                                <ul class="list-unstyled">
+                                    <li>✅ Simple functions</li>
+                                    <li>✅ Function parameters</li>
+                                    <li>✅ Return values</li>
+                                    <li>✅ Local scope</li>
+                                    <li>✅ Global scope</li>
+                                    <li>✅ Static variables</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <a href="functions_demo.php" class="btn btn-success w-100">Start Task 2</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Task 8 (Login System) -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card task-card h-100 border-warning">
+                            <div class="card-header bg-warning text-dark">
+                                <h5 class="mb-0">Task 8: Login System</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="task-number text-warning mb-3">08</div>
+                                <h6>Simple Login System</h6>
+                                <p class="text-muted">Build a complete login system with form handling, session management, password verification, and Bootstrap styling.</p>
+                                <ul class="list-unstyled">
+                                    <li>✅ Login form</li>
+                                    <li>✅ Password verification</li>
+                                    <li>✅ Session management</li>
+                                    <li>✅ Error handling</li>
+                                    <li>✅ Bootstrap styling</li>
+                                    <li>✅ Logout functionality</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <a href="simple_login.php" class="btn btn-warning w-100">Start Task 8</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coming Soon Cards -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card task-card h-100 border-secondary">
+                            <div class="card-header bg-secondary text-white">
+                                <h5 class="mb-0">Task 3: Arrays & Loops</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="task-number text-secondary mb-3">03</div>
+                                <h6>Arrays and Loops</h6>
+                                <p class="text-muted">Learn indexed arrays, associative arrays, multidimensional arrays, foreach loops, for loops, while loops, and array functions.</p>
+                                <span class="badge bg-secondary">Coming Soon</span>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-secondary w-100" disabled>Coming Soon</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card task-card h-100 border-info">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0">Task 4: Conditionals</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="task-number text-info mb-3">04</div>
+                                <h6>Conditional Statements</h6>
+                                <p class="text-muted">Master if statements, if-else, if-elseif-else, switch statements, ternary operators, comparison operators, and logical operators.</p>
+                                <span class="badge bg-info">Coming Soon</span>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-info w-100" disabled>Coming Soon</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card task-card h-100 border-danger">
+                            <div class="card-header bg-danger text-white">
+                                <h5 class="mb-0">Task 5: HTML & PHP</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="task-number text-danger mb-3">05</div>
+                                <h6>HTML and PHP Integration</h6>
+                                <p class="text-muted">Integrate PHP with HTML, handle forms with GET/POST methods, form validation, and Bootstrap styling integration.</p>
+                                <span class="badge bg-danger">Coming Soon</span>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-danger w-100" disabled>Coming Soon</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Tasks Info -->
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header bg-dark text-white">
+                                <h4 class="mb-0">Complete Task List</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>Available Tasks:</h6>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                Task 1: Basic PHP Syntax
+                                                <span class="badge bg-success rounded-pill">Complete</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                Task 2: Functions & Scope
+                                                <span class="badge bg-success rounded-pill">Complete</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                Task 8: Simple Login System
+                                                <span class="badge bg-success rounded-pill">Complete</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>Coming Soon:</h6>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Task 3: Arrays & Loops</li>
+                                            <li class="list-group-item">Task 4: Conditional Statements</li>
+                                            <li class="list-group-item">Task 5: HTML & PHP Integration</li>
+                                            <li class="list-group-item">Task 6: Sessions & Cookies</li>
+                                            <li class="list-group-item">Task 7: Form Validation</li>
+                                            <li class="list-group-item">Task 9: Data Display & Tables</li>
+                                            <li class="list-group-item">Task 10: File Include & Require</li>
+                                            <li class="list-group-item">Task 11: Super Globals</li>
+                                            <li class="list-group-item">Task 12: Error Handling</li>
+                                            <li class="list-group-item">Task 13: Fullstack Approach</li>
+                                            <li class="list-group-item">Task 14: Project Integration</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="text-center mt-5">
+                    <p class="text-muted">
+                        <strong>PHP Day 1 Training</strong><br>
+                        Comprehensive PHP fundamentals covering syntax, functions, forms, sessions, and more.
+                    </p>
+                    <a href="../" class="btn btn-outline-secondary">Back to Main Directory</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

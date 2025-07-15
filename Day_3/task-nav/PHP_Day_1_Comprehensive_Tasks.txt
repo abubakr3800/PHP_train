@@ -1,0 +1,193 @@
+PHP DAY 1 - COMPREHENSIVE TASKS
+=====================================
+
+Based on all projects in this workspace, here are comprehensive tasks covering PHP fundamentals:
+
+TASK 1: BASIC PHP SYNTAX AND VARIABLES
+----------------------------------------
+Create a file called `basic_syntax.php` that demonstrates:
+- PHP opening and closing tags
+- Variable declaration and usage
+- Different data types (string, integer, float, boolean, array, null)
+- Use gettype() function to display variable types
+- String concatenation
+- Basic arithmetic operations
+
+TASK 2: FUNCTIONS AND SCOPE
+----------------------------
+Create a file called `functions_demo.php` that includes:
+- Simple function with no parameters
+- Function with parameters
+- Function that returns a value
+- Function demonstrating local scope
+- Function demonstrating global scope
+- Static variable example
+- Function that uses built-in PHP functions
+
+TASK 3: ARRAYS AND LOOPS
+-------------------------
+Create a file called `arrays_loops.php` that demonstrates:
+- Indexed array creation and access
+- Associative array creation and access
+- Multidimensional array
+- foreach loop with arrays
+- for loop with indexed array
+- while loop example
+- Array functions (count, array_push, array_pop)
+
+TASK 4: CONDITIONAL STATEMENTS
+------------------------------
+Create a file called `conditionals.php` that includes:
+- if statement
+- if-else statement
+- if-elseif-else statement
+- switch statement
+- Ternary operator usage
+- Comparison operators
+- Logical operators (AND, OR, NOT)
+
+TASK 5: HTML AND PHP INTEGRATION
+--------------------------------
+Create a file called `html_php.php` that demonstrates:
+- PHP embedded in HTML
+- HTML forms with PHP processing
+- GET and POST methods
+- Form validation
+- Displaying form data
+- Bootstrap styling integration
+
+TASK 6: SESSIONS AND COOKIES
+-----------------------------
+Create a file called `sessions_demo.php` that includes:
+- Starting a session
+- Storing data in session
+- Retrieving session data
+- Destroying session
+- Setting cookies
+- Reading cookies
+- Session security basics
+
+TASK 7: FORM HANDLING AND VALIDATION
+------------------------------------
+Create a file called `form_validation.php` that demonstrates:
+- HTML form with multiple input types
+- PHP form processing
+- Input validation (required fields, email, numbers)
+- Error message display
+- Success message display
+- Form data sanitization
+- Bootstrap form styling
+
+TASK 8: SIMPLE LOGIN SYSTEM
+----------------------------
+Create a file called `simple_login.php` that includes:
+- Login form (username, password)
+- Password verification (hardcoded password: "123")
+- Session management
+- Welcome page for successful login
+- Error handling for wrong password
+- Logout functionality
+- Bootstrap styling
+
+TASK 9: DATA DISPLAY AND TABLES
+-------------------------------
+Create a file called `data_display.php` that demonstrates:
+- Array of user data (name, email, age, city)
+- Display data in HTML table
+- Bootstrap table styling
+- Search/filter functionality
+- Sorting data
+- Pagination concept
+
+TASK 10: FILE INCLUDE AND REQUIRE
+---------------------------------
+Create a file called `includes_demo.php` that includes:
+- Header file (header.php)
+- Footer file (footer.php)
+- Configuration file (config.php)
+- Main file that includes all components
+- Error handling for missing files
+- Modular code structure
+
+TASK 11: SUPER GLOBALS
+----------------------
+Create a file called `superglobals.php` that demonstrates:
+- $_GET usage
+- $_POST usage
+- $_SESSION usage
+- $_COOKIE usage
+- $_SERVER information
+- $_FILES (file upload concept)
+- Security considerations
+
+TASK 12: ERROR HANDLING
+-----------------------
+Create a file called `error_handling.php` that includes:
+- try-catch blocks
+- Custom error messages
+- Error logging
+- User-friendly error display
+- Form validation errors
+- Database connection error handling
+
+TASK 13: FULLSTACK APPROACH
+---------------------------
+Create a file called `fullstack_demo.php` that includes:
+- Data array embedded in PHP file
+- Direct data access (no API calls)
+- Server-side rendering
+- HTML generation with PHP
+- Bootstrap integration
+- Responsive design
+- Data filtering
+
+TASK 14: PROJECT INTEGRATION
+----------------------------
+Create a complete mini-project called `student_portfolio.php` that includes:
+- Student information form
+- Skills display
+- Profile page
+- Session management
+- Bootstrap styling
+- Form validation
+- Data persistence (sessions)
+
+BONUS TASKS:
+------------
+1. Create a simple calculator with PHP
+2. Build a to-do list application
+3. Create a simple blog post system
+4. Build a contact form with email functionality
+5. Create a simple quiz application
+
+REQUIREMENTS FOR ALL TASKS:
+---------------------------
+- Use Bootstrap for styling
+- Include proper error handling
+- Add comments explaining your code
+- Use meaningful variable names
+- Follow PHP best practices
+- Include responsive design
+- Add proper form validation
+- Use sessions where appropriate
+
+EVALUATION CRITERIA:
+--------------------
+✅ Code functionality (does it work?)
+✅ Code organization (is it well-structured?)
+✅ User interface (is it user-friendly?)
+✅ Error handling (are errors handled properly?)
+✅ Comments and documentation (is code explained?)
+✅ Responsive design (does it work on mobile?)
+✅ Security considerations (are inputs validated?)
+
+SUBMISSION FORMAT:
+------------------
+- Each task should be in a separate PHP file
+- Include a README file explaining each task
+- Test all functionality before submission
+- Ensure all files work independently
+- Include screenshots or demo links if possible
+
+DEADLINE: [Set by instructor]
+============================= 

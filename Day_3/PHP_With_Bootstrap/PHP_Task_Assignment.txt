@@ -1,0 +1,51 @@
+================================================================================
+                        SIMPLE PHP TASK
+================================================================================
+
+TASK: Create a basic form and display page
+
+FILES TO CREATE:
+1. loginform.php - Form with user input
+2. profile.php - Page to show the data
+
+================================================================================
+REQUIREMENTS:
+================================================================================
+
+LOGINFORM.PHP:
+- Full Name (required)
+- Email (required) 
+- Age (optional)
+- City (optional)
+- Use Bootstrap for styling
+- Submit to profile.php
+
+PROFILE.PHP:
+- Show the submitted data
+- Display user's name at top
+- List all information
+- Add "Back to Form" button
+- Use Bootstrap styling
+
+================================================================================
+WHAT TO DO:
+================================================================================
+
+1. Create loginform.php with 4 input fields
+2. Create profile.php to display the data
+3. Test that form works
+4. Make it look nice with Bootstrap
+
+================================================================================
+GRADING:
+================================================================================
+
+✓ Works (70%): Form submits and shows data
+✓ Looks Good (30%): Clean design with Bootstrap
+
+================================================================================
+DEADLINE: [Add your deadline]
+================================================================================
+
+Keep it simple! Just make it work first.
+================================================================================ 

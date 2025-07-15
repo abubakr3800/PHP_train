@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple bootstrap Page</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-dark text-white">
+    <div class="container">
+      <div class="row mt-5 d-flex justify-content-center">
+        <div class="col-md-6">
+          <form class="p-3 was-validated text-end">
+            <div class="mb-3">
+              <label class="form-label">الاسم</label>
+              <input
+                type="text"
+                class="form-control is-valid"
+                id="validationServer01"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">رقم الهاتف</label>
+              <input
+                type="tel"
+                class="form-control is-valid"
+                id="validationServer02"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">المدينة</label>
+              <input
+                type="text"
+                class="form-control is-valid"
+                id="validationServer03"
+                required
+              />
+            </div>
+            <button 
+                    type="submit" 
+                    class="btn btn-success btn-lg btn-block w-100">
+                    تسجيل
+            </button>
+          </form>
+        </div>
+      </div>
+           
+    </div>
+    <!-- Bootstrap JS Bundle CDN -->
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple bootstrap Page</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="bg-dark text-white">
+    <div class="container">
+      <div class="row mt-5 d-flex justify-content-center">
+        <div class="col-md-6">
+            <!-- bootstrap form -->
+            <form class="p-3 text-end was-validated">
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label class="form-label">الاسم </label>
+                    <input type="text" class="form-control is-valid" id="validationServer01" required />
+                  </div>
+                </div>
+
+                <div class="mb-3 col-6">
+                  <label class="form-label">البريد </label>
+                  <input type="email" class="form-control is-valid" id="validationServer02" required />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block w-100">إرسال</button>
+              </div>
+            </form>
+            <!-- bootstrap form -->
+        </div>
+
+      </div>
+    </div>
+    <!-- Bootstrap JS Bundle CDN -->
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>
