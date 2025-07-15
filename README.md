@@ -1,4 +1,4 @@
-# PHP_train
+# PHP_training
 
 This repository contains PHP training materials organized by days. Each day contains multiple projects, tasks, and examples to help you learn PHP step by step.
 
