@@ -4,7 +4,6 @@ This directory contains various PHP learning resources, projects, and tasks for 
 
 ## Contents
 
-- [add/](./add/): ZIP archives with additional PHP projects and tasks.
 - [day_1_task/](./day_1_task/): Basic PHP syntax, functions demo, simple login, and comprehensive tasks.
 - [from-desk-top/](./from-desk-top/): Miscellaneous PHP, session, and test projects.
 - [PHP_Simple/](./PHP_Simple/): Simple PHP scripts, session handling, and profile management.
