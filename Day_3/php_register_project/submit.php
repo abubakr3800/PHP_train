@@ -1,5 +1,5 @@
 <?php
-$name = $_POST['name'] ?? '';
+$name = $_POST['username'] ?? '';
 $track = $_POST['track'] ?? '';
 $email = $_POST['email'] ?? '';
 $phone = $_POST['phone'] ?? '';
