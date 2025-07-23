@@ -1,0 +1,26 @@
+[
+    {
+        "username": "ahmedabubakr148",
+        "password": "abcd1234",
+        "email": "ahmedabubakr148@gmail.com",
+        "gender": "male",
+        "job": "Developer",
+        "avatar": "uploads\/profiles\/1752914473_favicon-96x96.png"
+    },
+    {
+        "username": "ahmedabubakr",
+        "password": "112233",
+        "email": "john.doe@student.com",
+        "gender": "male",
+        "job": "Manager",
+        "avatar": "uploads\/profiles\/1753035322_favicon-96x96.png"
+    },
+    {
+        "username": "ahmedabubakr22",
+        "password": "11223344",
+        "email": "ahmedabubakr148@gmail.com",
+        "gender": "male",
+        "job": "Developer",
+        "avatar": "uploads\/profiles\/1753040940_Mr.-Robot-S01.jpg"
+    }
+]
