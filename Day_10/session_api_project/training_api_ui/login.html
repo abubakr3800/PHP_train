@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="loginForm">
+        <input type="email" name="email" placeholder="Email" required class="form-control mb-2" />
+        <input type="password" name="password" placeholder="Password" required class="form-control mb-2" />
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const data = Object.fromEntries(new FormData(this).entries());
+
+            fetch("./login.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            })
+            .then(res => res.json())
+            .then(res => {
+                if (res.status === "success") {
+                localStorage.setItem("token", res.token);
+                localStorage.setItem("user", res.name);
+                alert("✅ Logged in");
+                window.location.href = "courses.html";
+                } else {
+                alert("❌ " + res.message);
+                }
+            });
+        });
+    </script>
+    
+    <script>
+    // 🔐 تحقق أولاً إذا كان فيه Cookie باسم token
+    function getCookie(name) {
+        const cookies = document.cookie.split(';');
+
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim(); // إزالة المسافات
+            
+            if (cookie.startsWith(name + '=')) {
+                return decodeURIComponent(cookie.substring(name.length + 1));
+            }
+        }
+
+        return null; // لو ملقاش الكوكي
+    }
+
+    const existingToken = getCookie("PHPSESSID");
+
+    if (existingToken) {
+        if (!confirm("⚠️ انت بالفعل مسجل دخول. هل تريد تسجيل الخروج؟")) {
+            window.location.href = "courses.html"; // لو رفض تسجيل الخروج
+        } else {
+            // لو وافق على تسجيل الخروج، نحذف الكوكيز
+            document.cookie = "PHPSESSID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            localStorage.clear(); // تنظيف بيانات localStorage كمان لو فيه
+        }
+    }
+    </script>
+
+    <!-- 
+    <script>
+    // 🟡 التحقق من وجود كوكيز قبل إرسال النموذج
+    function getCookie(name) {
+    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+    }
+
+    const existingPHPSSID = getCookie("token");
+
+    if (existingToken) {
+    if (!confirm("⚠️ انت بالفعل مسجل دخول. هل تريد تسجيل الخروج؟")) {
+        window.location.href = "courses.html";
+    } else {
+        document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        localStorage.clear();
+    }
+    }
+
+    // ✅ دالة تسجيل الدخول باستخدام fetch داخل async function
+    async function loginUser(data) {
+    const res = await fetch("./login.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+    return result; // ✅ رجّع البيانات
+    }
+
+    // 📥 التعامل مع إرسال النموذج
+    document.getElementById("loginForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(this).entries());
+
+    const response = await loginUser(data);
+
+    if (response.status === "success") {
+        localStorage.setItem("token", response.token);
+        localStorage.setItem("user", response.name);
+        document.cookie = "token=" + response.token + "; path=/;";
+        document.cookie = "user=" + response.name + "; path=/;";
+        alert("✅ Logged in");
+        window.location.href = "courses.html";
+    } else {
+        alert("❌ " + response.message);
+    }
+    });
+    </script> -->
+
+</body>
+</html>
