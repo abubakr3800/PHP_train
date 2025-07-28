@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Courses</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Training System</a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="students.html">Students</a></li>
+            <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="enrollments.html">Enrollments</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row d-flex justify-content-center ">
+        <div class="col-8">
+          <h3 class="text-center my-3">Courses List</h3>
+          <div class="row" id="courses"></div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="row d-flex justify-content-center my-4">
+        <div class="col-md-6">
+          <h4>إضافة كورس جديد</h4>
+          <form id="addCourseForm" class="mb-4">
+            <input class="form-control mb-2" type="text" placeholder="Course Title" name="title" required>
+            <input class="form-control mb-2" type="text" placeholder="Description" name="description">
+            <input class="form-control mb-2" type="number" step="0.01" placeholder="Hours" name="hours">
+            <input class="form-control mb-2" type="number" step="0.01" placeholder="Price" name="price">
+            <button type="submit" class="btn btn-success">Add Course</button>
+          </form>
+        </div>
+      </div>
+
+      <hr/>
+      
+      <div class="row d-flex justify-content-center my-4">
+        <div class="col-md-6">
+          <h4>تعديل كورس</h4>
+          <select id="put-options" onchange="read(this.value)" class="form-control mb-2" placeholder="Course ID" name="id">
+            <option value="">Select Course Title</option>
+            <optgroup>
+            </optgroup>
+          </select>
+    
+          <form id="editCourseForm" class="mb-4">
+            <div class="selected" id="selected"></div>
+            <input class="form-control mb-2" type="number" placeholder="Course ID" name="id" readonly disabled required>
+            <input class="form-control mb-2" type="text" placeholder="New Title" name="title">
+            <input class="form-control mb-2" type="text" placeholder="New Description" name="description">
+            <input class="form-control mb-2" type="number" step="0.01" placeholder="New Hours" name="hours">
+            <input class="form-control mb-2" type="number" step="0.01" placeholder="New Price" name="price">
+            <button type="submit" class="btn btn-primary">Update Course</button>
+          </form>
+        </div>
+        </div>
+      </div>
+
+    <script>
+      function read(id = ''){
+        fetch("http://localhost/PHP_training/Day10/courses_api/" + ( id == '' ? '' : '?id=' + id))
+          .then(res => res.json())
+          .then(data => {
+            let html = "";
+            let options = '';
+            let inputs ;
+            data.forEach(course => {
+              html += `<div class="col-md-4">
+                <div class="card shadow p-3 mb-3">
+                  <h5>${course.title}</h5>
+                  <p>Description: ${course.description}</p>
+                  <p>Hours: ${course.hours}</p>
+                  <p>Price: ${course.price}</p>
+                </div>
+              </div>`;
+              options += `
+                <option value="${course.id}">${course.title}</option>
+              `;
+              if (id != '') {
+                inputs = data;
+                console.log("input" ,inputs);
+              }
+            });
+            if (id != '') {
+              theForm = document.getElementById("editCourseForm");
+              theForm.querySelector('#selected').innerHTML = "<hr/>selected element is :<strong><u>" + inputs[0].title + "</u></strong> <hr/>please edit what you want and leave the rest";
+              theForm.querySelector('#selected').classList.add("my-4");
+              theForm.querySelector('input[name="id"]').value = inputs[0].id;
+              theForm.querySelector('input[name="title"]').value = inputs[0].title;
+              theForm.querySelector('input[name="description"]').value = inputs[0].description;
+              theForm.querySelector('input[name="hours"]').value = inputs[0].hours;
+              theForm.querySelector('input[name="price"]').value = inputs[0].price;
+              read();
+            }else {
+              document.getElementById("courses").innerHTML = html;
+              document.getElementById("put-options").innerHTML = options;
+            }
+          });
+      }
+
+      read();
+    </script>
+
+    <script>
+      document.getElementById("addCourseForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        const form = e.target;
+        const data = {
+          title: form.title.value,
+          description: form.description.value,
+          hours: form.hours.value,
+          price: form.price.value
+        };
+        fetch("http://localhost/PHP_training/Day10/courses_api/post.php", {
+          method: "POST", // $_SERVER["REQUEST_METHOD"]
+          body: JSON.stringify(data)
+        }).then(res => res.json()).then(res => {
+          alert("✅ " + res.status);
+          console.log(res);
+          
+          read();
+        });
+      });
+    </script>
+
+    <script>
+      document.getElementById("editCourseForm").addEventListener("submit", function(e){
+        e.preventDefault();
+        
+        const form = e.target;
+        const data = {
+          id: form.id.value,
+          title: form.title.value,
+          description: form.description.value,
+          hours: form.hours.value,
+          price: form.price.value
+        };
+
+        fetch("http://localhost/PHP_training/Day10/courses_api/put.php", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(res => {
+          alert("🔁 " + res.status);
+          console.log(res);
+          read();
+        });
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase Bootstrap Demo</title>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light py-5">
+  <div class="container">
+    <h1 class="text-center mb-4">🔥 Firebase Bootstrap Demo</h1>
+
+    <!-- Input -->
+    <div class="input-group mb-4">
+      <input type="text" id="nameInput" class="form-control" placeholder="Enter your name" />
+      <button class="btn btn-primary" onclick="addName()">Add</button>
+    </div>
+
+    <!-- Card List -->
+    <div class="row" id="cardList"></div>
+  </div>
+
+  <script>
+    // Firebase Config
+    const firebaseConfig = {
+      apiKey: "AIzaSyCZigNjL2242LVnPMEMYT5-Prr9i32-WnI",
+      authDomain: "session-f6013.firebaseapp.com",
+      projectId: "session-f6013"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    // Add Name
+    function addName() {
+      const name = document.getElementById("nameInput").value.trim();
+      if (!name) return;
+
+      db.collection("names").add({
+        name: name,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      }).then(() => {
+        document.getElementById("nameInput").value = "";
+        getNames();
+      });
+    }
+
+    // Get Names
+    function getNames() {
+      db.collection("names").orderBy("createdAt", "desc").get().then(snapshot => {
+        const list = document.getElementById("cardList");
+        list.innerHTML = "";
+
+        snapshot.forEach(doc => {
+          const data = doc.data();
+          const name = data.name;
+          const createdAt = data.createdAt?.toDate().toLocaleString() || "Loading...";
+
+          const card = `
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">${name}</h5>
+                  <p class="card-text text-muted">🕒 ${createdAt}</p>
+                </div>
+              </div>
+            </div>
+          `;
+          list.innerHTML += card;
+        });
+      });
+    }
+
+    // Load on start
+    window.onload = getNames;
+  </script>
+  <script>
+    function login() {
+    // بننشئ provider لتسجيل الدخول بجوجل
+    const provider = new firebase.auth.GoogleAuthProvider();
+
+        // فتح نافذة تسجيل الدخول (Popup)
+        firebase.auth().signInWithPopup(provider)
+        .then(result => {
+            // المستخدم بعد ما سجل الدخول بنجاح
+            const user = result.user;
+
+            // نعرض اسم المستخدم في الـ UI
+            document.getElementById("userInfo").textContent = `👋 Welcome, ${user.displayName}`;
+
+            // نظهر زر الـ Logout
+            document.getElementById("logoutBtn").classList.remove("d-none");
+
+            // نحفظ المستخدم الحالي في متغير عالمي (ممكن تكون عرفته فوق)
+            currentUser = user;
+
+            // استدعاء عرض البيانات الخاصة بالمستخدم
+            showUserTasks(); // لو بتستخدم To-Do أو أي داتا خاصة بـ UID
+            })
+            .catch(error => {
+            // في حالة حدوث خطأ أثناء تسجيل الدخول
+            console.error("Login Error:", error.message);
+            alert("❌ Login failed: " + error.message);
+        });
+    }
+
+    function logout() {
+        // استدعاء تسجيل الخروج من Firebase
+        firebase.auth().signOut()
+            .then(() => {
+            // إزالة بيانات المستخدم من الواجهة
+            document.getElementById("userInfo").textContent = "";
+
+            // إخفاء زر الخروج
+            document.getElementById("logoutBtn").classList.add("d-none");
+
+            // إخفاء البيانات الخاصة بالمستخدم
+            document.getElementById("cardList").innerHTML = "";
+
+            // إلغاء المتغير الخاص بالمستخدم الحالي
+            currentUser = null;
+            })
+            .catch(error => {
+            console.error("Logout Error:", error.message);
+            alert("❌ Logout failed: " + error.message);
+            });
+    }
+
+  </script>
+</body>
+</html>

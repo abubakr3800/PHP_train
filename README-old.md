@@ -64,7 +64,47 @@ This repository contains PHP training materials organized by days. Each day cont
 - **[ex/](./Day_8/ex/):** Contains `db.php`, `insert_student.php`, `add_student.php`.
 
 ### [Day_9/](./Day_9/)
+- **[training_system/](./Day_9/training_system/):** Full-featured training system with subfolders for `students/`, `sql_data/`, `logs/`, `enrollments/`, `dt/`, `db/`, `courses/`, and files like `login.php`, `navbar.php`, `register.php`, `admin.php`, `failed_logs.php`, `logs.php`, `index.php`, `logout.php`, `dash.php`, `user.php`, `join.sql`.
+- **[secure_login_project/](./Day_9/secure_login_project/):** Secure login system with `register.php`, `login.php`, `database.sql`, `db.php`, `login.html`, `register.html`.
+- **[php_mysql/](./Day_9/php_mysql/):** PHP MySQL examples: `connection.php`, `simple_select_OOP.php`, `db.php`, `add_student.php`, `students.php`, `add_course.php`.
+- **[ins_php_mysql/](./Day_9/ins_php_mysql/):** Insert student PHP/MySQL examples: `db.php`, `insert_student.php`, `add_student.php`.
+- **[enum_vs_int_example/](./Day_9/enum_vs_int_example/):** Enum vs Int form and schema example: `enum_form.php`, `int_form.php`, `schema.sql`.
+- **[auth_dashboard/](./Day_9/auth_dashboard/):** Auth dashboard with `logs/` subfolder, `dashboard.php`, `db.php`, `login.php`, `logout.php`, `register.php`.
+- **[auth/](./Day_9/auth/):** Auth system with `register.php`, `login.php`.
+- **chat.php, regtest.php, product.php, logtest.php, regform.php, logform.php, logout.php:** Additional PHP scripts for chat, registration, product, logging, and authentication.
 - **README.md:** Main documentation for Day 9.
+
+### [Day_10/](./Day_10/)
+- **[session_api_project/](./Day_10/session_api_project/):**
+  - **[courses_api/](./Day_10/session_api_project/courses_api/):** PHP API for courses.
+  - **[training_api_ui/](./Day_10/session_api_project/training_api_ui/):** UI for training API.
+- **Readme.md:** Main documentation for Day 10.
+
+### [Day_11/](./Day_11/)
+- **[oop_vs_native_examples/](./Day_11/oop_vs_native_examples/):** Contains `oop/` and `native/` subfolders with OOP and native PHP examples, and a `README.txt`.
+- **[oop_vs_naitive/](./Day_11/oop_vs_naitive/):** Contains subfolders for `tasks/`, `student/`, `api_oop/`, and various PHP files demonstrating OOP concepts.
+- **[oop_vs_native_advanced/](./Day_11/oop_vs_native_advanced/):** (Folder present, contents not listed.)
+- **[session_api_project/](./Day_11/session_api_project/):**
+  - **[courses_api/](./Day_11/session_api_project/courses_api/):** PHP API for courses.
+  - **[training_api_ui/](./Day_11/session_api_project/training_api_ui/):** UI for training API.
+- **day_11_oop_vs_native.md, oop_core_principles.md, Day11 Oop Vs Native.pdf:** Documentation and notes for Day 11.
+
+### [Day_12/](./Day_12/)
+- **[day12_final_examples/](./Day_12/day12_final_examples/):** Contains `Student/` subfolder, multiple SQL and PHP files, and advanced SQL/OOP examples.
+- **[day12_oop_examples/](./Day_12/day12_oop_examples/):** Contains `Database.php`, `Student.php`, `get_student.php`.
+- **[day12_phpunit_tests/](./Day_12/day12_phpunit_tests/):** Contains `Database.php`, `Student.php`, and `tests/` subfolder.
+- **[day12_phpunit_tests_ready/](./Day_12/day12_phpunit_tests_ready/):** Contains `Database.php`, `Student.php`, and `tests/` subfolder.
+- **[day12_tasks_answers/](./Day_12/day12_tasks_answers/):** Contains SQL and PHP answers for Day 12 tasks.
+- **[oop_vs_naitive/](./Day_12/oop_vs_naitive/):** Contains subfolders for `tasks/`, `student/`, `api_oop/`, and various PHP files demonstrating OOP concepts.
+- **[session/](./Day_12/session/):** Contains `secure.php`, `test.php`.
+- **[session_api_project/](./Day_12/session_api_project/):**
+  - **[courses_api/](./Day_12/session_api_project/courses_api/):** PHP API for courses.
+  - **[training_api_ui/](./Day_12/session_api_project/training_api_ui/):** UI for training API.
+- **day_12_advanced_sql_oop.md, day_12_advanced_sql_security.md, Day12 Advanced Sql Oop.pdf:** Documentation and notes for Day 12.
+
+### [firebase/](./firebase/)
+- **[firebase_todo/](./firebase/firebase_todo/):** Contains `firebase_todo.html`, `index.html`, `login.html` for a Firebase todo app.
+- **Firebase Frontend Day.pdf, firebase_todo.zip, Readme.md, Day 10 ppt v2.0.0.pptx:** Firebase-related documentation and resources.
 
 ### [cheatsheet/](./cheatsheet/)
 - **[cf04243d5c87a6516f7dc781514c1eb9/](./cheatsheet/cf04243d5c87a6516f7dc781514c1eb9/):** Contains `php_cheatsheet.md`.
