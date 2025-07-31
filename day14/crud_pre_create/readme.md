@@ -25,6 +25,7 @@
 ### **Slide 3: تنصيب Laravel + Breeze**
 
 ```bash
+composer global require laravel/installer
 composer create-project laravel/laravel articles-app
 cd articles-app
 composer require laravel/breeze --dev
