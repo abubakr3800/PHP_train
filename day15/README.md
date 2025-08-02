@@ -18,7 +18,7 @@
 10. [CRUD Operations](#crud-operations)
 11. [Authorization & Policies](#authorization--policies)
 12. [Testing with Seeders & Factories](#testing-with-seeders--factories)
-13. [Deployment & Hosting](#deployment--hosting)
+13. [Deployment & Hosting](#-deployment--hosting)
 14. [Testing and Debugging](#testing-and-debugging)
 15. [Next Steps](#next-steps)
 
