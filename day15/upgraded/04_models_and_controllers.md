@@ -237,6 +237,12 @@ class ArticleController extends Controller
         // Redirect with success message
         return redirect()->route('articles.index')->with('success', 'Article deleted!');
     }
+
+    public function show(Article $article)
+    {
+        $article->load('user'); // eager load author
+        return view('articles.show', compact('article'));
+    }
 }
 ```
 
