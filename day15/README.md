@@ -544,8 +544,8 @@ Route::get('/articles', [ArticleController::class, 'index'])->name('articles.ind
 // Protected CRUD routes - only authenticated users can access
 Route::middleware(['auth'])->group(function () {
     // Resource routes for articles (create, store, edit, update, destroy)
-    // except(['index', 'show']) means skip index and show routes (already defined above)
-    Route::resource('articles', ArticleController::class)->except(['index', 'show']);
+    // except(['index']) means skip index route (already defined above)
+Route::resource('articles', ArticleController::class)->except(['index']);
 });
 ```
 
@@ -555,7 +555,7 @@ Route::middleware(['auth'])->group(function () {
 - **`Route::get('/articles', ...)`**: Public route to view all articles
 - **`middleware(['auth'])`**: Protects routes - only logged-in users can access
 - **`Route::resource()`**: Creates all CRUD routes automatically
-- **`except(['index', 'show'])`**: Excludes these routes (already defined as public)
+- **`except(['index'])`**: Excludes index route (already defined as public)
 - **`->name('articles.index')`**: Gives the route a name for easy reference
 
 ### **Resource vs Manual Routes**
@@ -579,7 +579,7 @@ Route::middleware(['auth'])->group(function () {
 - `Route::get()`: مسار للقراءة فقط
 - `Route::resource()`: إنشاء جميع مسارات CRUD
 - `middleware(['auth'])`: حماية المسارات
-- `except(['index', 'show'])`: استثناء مسارات معينة
+- `except(['index'])`: استثناء مسار معين
 
 ---
 
